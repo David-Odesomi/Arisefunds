@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Button from "@/components/Button"
 
 export default function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -64,11 +65,7 @@ export default function HeroCarousel() {
                   institutional systems that generate returns and create employment at scale.
                 </p>
 
-                <div className="mt-4">
-                  <button className="bg-[#149EED] text-white px-8 py-3 text-sm font-medium hover:bg-[#149EED]/90 transition-colors pointer-events-auto">
-                    Get intouch
-                  </button>
-                </div>
+                <Button></Button>
               </div>
 
               {/* Right Image Space */}
