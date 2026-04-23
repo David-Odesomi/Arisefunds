@@ -1,9 +1,9 @@
 export default function MyComponent() {
     return (
-        <div>
-            <button className="py-1.5 px-3 bg-[#4CA5D8]">
-                Get in touch
+        <div className="mt-4">
+            <button className="bg-[#149EED] text-white px-8 py-3 text-sm font-medium hover:bg-[#149EED]/90 transition-colors">
+              Get intouch
             </button>
-        </div>
+          </div>
     );
 }
