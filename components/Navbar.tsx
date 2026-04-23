@@ -6,7 +6,7 @@ export default function MyComponent() {
     return (
         <div>
             <nav>
-                <div className='bg-[#042133] py-1'>
+                <div className='bg-[#042133] py-1 text-[#FFF]'>
                     <ul className="flex list-none items-center justify-between px-6">
                         <div className="flex items-center ml-20">
                             <h1 className="font-semibold text-xl text-heavy">Arisefunds</h1>

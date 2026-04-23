@@ -3,7 +3,7 @@ import Button2 from "@/components/Button2"
 export default function MyComponent() {
     return (
         <div>
-                <div className="bg-[#1096DC] text-center pt-5 pb-5">
+                <div className="bg-[#1096DC] text-center pt-5 pb-5 text-[#FFF]">
                     <h1 className="text-5xl font-semibold mb-4">
                         Where talent meets infrastructure
                     </h1>
