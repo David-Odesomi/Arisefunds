@@ -1,8 +1,19 @@
 "use client";
 import { useState } from "react";
 
+type FormState = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  role: string;
+  organization: string;
+  message: string;
+};
+
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
 export default function GetIntouch() {
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<FormState>({
     firstName: "",
     lastName: "",
     email: "",
@@ -11,11 +22,11 @@ export default function GetIntouch() {
     message: "",
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const validate = () => {
-    const newErrors = {};
+  const validate = (): FormErrors => {
+    const newErrors: FormErrors = {};
 
     if (!form.firstName.trim()) newErrors.firstName = "First name is required.";
     if (!form.lastName.trim()) newErrors.lastName = "Last name is required.";
@@ -34,11 +45,12 @@ export default function GetIntouch() {
     return newErrors;
   };
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    // Clear the error for this field as the user types
-    if (errors[name]) {
+    if (errors[name as keyof FormState]) {
       setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
@@ -50,7 +62,6 @@ export default function GetIntouch() {
       return;
     }
 
-    // All good — fire success toast
     setSubmitted(true);
     setForm({
       firstName: "",
@@ -65,7 +76,7 @@ export default function GetIntouch() {
     setTimeout(() => setSubmitted(false), 4000);
   };
 
-  const inputClass = (field) =>
+  const inputClass = (field: keyof FormState) =>
     `bg-transparent border-b focus:outline-none py-2 text-white placeholder-gray-400 w-full transition-colors ${
       errors[field]
         ? "border-red-400 focus:border-red-400"
@@ -74,7 +85,6 @@ export default function GetIntouch() {
 
   return (
     <div className="bg-[#042133] pb-24 relative">
-      {/* ✅ Success Toast */}
       {submitted && (
         <div className="fixed top-6 right-6 z-50 bg-[#1096DC] text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in">
           <svg
@@ -110,7 +120,6 @@ export default function GetIntouch() {
       </div>
 
       <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16 text-white">
-        {/* Left Card — unchanged */}
         <div className="bg-[#1096DC] rounded-xl p-10 flex flex-col justify-between relative overflow-hidden h-full">
           <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-[#0D87C9] rounded-full blur-[2px] opacity-60"></div>
           <div className="absolute -bottom-16 right-12 w-48 h-48 bg-[#0C7BB8] rounded-full blur-[2px] opacity-50"></div>
@@ -122,7 +131,7 @@ export default function GetIntouch() {
           <div className="relative z-10">
             <hr className="border-white mb-6 w-[80%]" />
             <p className="text-lg mb-2">Or reach us directly</p>
-            <a
+            
               href="mailto:info@arisefunds.com"
               className="text-lg underline hover:text-white/80 transition-colors"
             >
@@ -131,7 +140,6 @@ export default function GetIntouch() {
           </div>
         </div>
 
-        {/* Right Side: Form */}
         <div className="flex flex-col gap-8 pt-4">
           <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-1">
