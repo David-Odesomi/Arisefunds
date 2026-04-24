@@ -1,13 +1,41 @@
-import React from 'react';
+import React from "react";
 
 const stages = [
-  { id: 1, title: "Discover", desc: "AI-driven aptitude assessment and pathway matching — directing talent correctly before training begins." },
-  { id: 2, title: "Prepare", desc: "Removing structural barriers to participation — devices, connectivity, financing — before training begins." },
-  { id: 3, title: "Train", desc: "Competency-based training across five digital economy pathways — building job-ready skills" },
-  { id: 4, title: "Certify", desc: "Globally recognized certifications that employers trust and that hold their value across borders." },
-  { id: 5, title: "Employ", desc: "Verified employment placement — into BPO operations, government contracts, and private sector partnerships." },
-  { id: 6, title: "Advance", desc: "Graduates advance into higher-value roles — analysts, engineers, managers, and entrepreneurs" },
-  { id: 7, title: "Reinvest", desc: "Graduate repayments and employer revenue fund the next cohort. The system becomes self-sustaining at scale." }
+  {
+    id: 1,
+    title: "Discover",
+    desc: "AI-driven aptitude assessment and pathway matching — directing talent correctly before training begins.",
+  },
+  {
+    id: 2,
+    title: "Prepare",
+    desc: "Removing structural barriers to participation — devices, connectivity, financing — before training begins.",
+  },
+  {
+    id: 3,
+    title: "Train",
+    desc: "Competency-based training across five digital economy pathways — building job-ready skills",
+  },
+  {
+    id: 4,
+    title: "Certify",
+    desc: "Globally recognized certifications that employers trust and that hold their value across borders.",
+  },
+  {
+    id: 5,
+    title: "Employ",
+    desc: "Verified employment placement — into BPO operations, government contracts, and private sector partnerships.",
+  },
+  {
+    id: 6,
+    title: "Advance",
+    desc: "Graduates advance into higher-value roles — analysts, engineers, managers, and entrepreneurs",
+  },
+  {
+    id: 7,
+    title: "Reinvest",
+    desc: "Graduate repayments and employer revenue fund the next cohort. The system becomes self-sustaining at scale.",
+  },
 ];
 
 export default function IcbmModel() {
@@ -18,7 +46,8 @@ export default function IcbmModel() {
           The ICBM <span className="text-[#149EED]">Model</span>
         </h1>
         <p className="font-medium text-lg text-gray-200">
-          ICBM is a 7-stage workforce development flywheel — not a training program.
+          ICBM is a 7-stage workforce development flywheel — not a training
+          program.
         </p>
       </div>
 
@@ -30,7 +59,9 @@ export default function IcbmModel() {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-2">{stages[0].title}</h3>
-            <p className="text-sm text-gray-300 leading-relaxed">{stages[0].desc}</p>
+            <p className="text-sm text-gray-300 leading-relaxed">
+              {stages[0].desc}
+            </p>
           </div>
         </div>
         <div className="hidden md:block"></div>
@@ -44,7 +75,9 @@ export default function IcbmModel() {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-2">{stage.title}</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">{stage.desc}</p>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                {stage.desc}
+              </p>
             </div>
           </div>
         ))}

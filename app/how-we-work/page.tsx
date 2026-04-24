@@ -2,6 +2,7 @@ import Card from "@/components/Card";
 import SmallBanner from "@/components/SmallBanner";
 import GetInTouch from "@/components/GetIntouch";
 import Footer from "@/components/Footer";
+import SideImage from "@/components/SideImages";
 
 const cards = [
   {
@@ -152,6 +153,58 @@ export default function HowWeWork() {
           </div>
         </div>
       </div>
+      <SideImage
+        image="/glassesgirl.png"
+        // label="Current Focus"
+        title={
+          <>
+            50K Youth <span className="text-[#1096DC]">Employment Target</span>
+          </>
+        }
+        description="50K Youth Employment Target is a strategic goal by Arisefunds to empower and place 
+    50,000 young people across Africa into sustainable jobs through a structured pathway of funding, 
+    training, and employment support."
+      />
+
+      <SideImage
+        image="/fistbump.jpg"
+        // label="For Family Offices"
+        title={
+          <>
+            50%<span className="text-[#1096DC]">Young Women</span> - Every
+            Cohort
+          </>
+        }
+        description="50% Young Women — Every Cohort reflects AriseFunds’ commitment to gender inclusion and equal
+     opportunity, ensuring that at least half of every intake is made up of young women."
+        reverse={true}
+      />
+      <SideImage
+        image="/on3.jpg"
+        // label="Current Focus"
+        title={
+          <>
+            7-Stage <span className="text-[#1096DC]">Talent Economy</span>{" "}
+            Flywheel
+          </>
+        }
+        description="7-Stage Talent Economy Flywheel describes AriseFunds’ end-to-end, self-reinforcing
+     system for developing and sustaining a skilled workforce pipeline."
+      />
+
+      <SideImage
+        image="/map.png"
+        // label="For Family Offices"
+        title={
+          <>
+            8 Countries
+            <span className="text-[#1096DC]">- Current Footprint</span>
+          </>
+        }
+        description="8 Countries — Current Footprint highlights the geographic scope of AriseFunds’ operations, 
+    indicating that the organization currently works across eight different countries."
+        reverse={true}
+      />
 
       <GetInTouch />
       <Footer />
