@@ -38,7 +38,7 @@ export default function HowWeWork() {
   return (
     <div>
       {/* How We Work */}
-      <div className="bg-[#011825] min-h-screen px-16 py-5">
+      <div className="bg-[#011825] px-16 py-16">
         <div className="pb-10 text-center">
           <h1 className="text-4xl font-bold pt-10 text-[#FFF]">
             How We <span className="text-[#1096DC]">Work</span>
@@ -49,7 +49,7 @@ export default function HowWeWork() {
           </p>
         </div>
 
-        <div className="flex gap-8 items-start mt-8">
+        <div className="flex gap-8 items-stretch mt-12">
           {cards.map((card) => (
             <Card key={card.number} {...card} />
           ))}

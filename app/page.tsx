@@ -99,7 +99,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex gap-8 items-start mt-8">
+        <div className="flex gap-8 items-stretch mt-8">
           {cards.map((card) => (
             <Card key={card.number} {...card} />
           ))}
