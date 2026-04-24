@@ -2,6 +2,8 @@ import  Button from "@/components/Button"
 
 
 
+import Link from "next/link";
+
 export default function MyComponent() {
     return (
         <div>
@@ -14,11 +16,11 @@ export default function MyComponent() {
                         </div>
 
                         <div className="flex gap-8 text-sm font-medium">
-                            <li>Home</li>
-                            <li>How we work</li>
-                            <li>ICBM</li>
-                            <li>Partners</li>
-                            <li>Contact</li>
+                            <li><Link href="/">Home</Link></li>
+                            <li><Link href="/how-we-work">How we work</Link></li>
+                            <li><Link href="/icbm">ICBM</Link></li>
+                            <li><Link href="/partners">Partners</Link></li>
+                            <li><Link href="/contact">Contact</Link></li>
                         </div>
 
                         <Button />
