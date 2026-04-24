@@ -131,7 +131,7 @@ export default function GetIntouch() {
           <div className="relative z-10">
             <hr className="border-white mb-6 w-[80%]" />
             <p className="text-lg mb-2">Or reach us directly</p>
-            
+            <a
               href="mailto:info@arisefunds.com"
               className="text-lg underline hover:text-white/80 transition-colors"
             >
