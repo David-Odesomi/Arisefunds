@@ -1,3 +1,14 @@
+import React from "react"
+
+type CardProps = {
+  number: string | number
+  category: string
+  title: string
+  description: string
+  icon: React.ReactNode
+  iconBg: string
+}
+
 export default function Card({
   number,
   category,
@@ -20,5 +31,5 @@ export default function Card({
       <h2 className="text-2xl font-bold mb-5 text-left leading-snug">{title}</h2>
       <p className="text-sm leading-relaxed text-left text-white/90">{description}</p>
     </div>
-  );
+  )
 }
