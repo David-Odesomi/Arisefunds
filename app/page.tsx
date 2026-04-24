@@ -56,7 +56,7 @@ export default function Home() {
         <div className="flex gap-8 items-center px-16 py-12">
           <div className="w-[40%] ml-20">
             <img
-              src="./campus.jpg"
+              src="./Campus.jpg"
               alt="A Campus"
               className="w-full aspect-square object-cover rounded-xl"
             />
@@ -194,7 +194,7 @@ export default function Home() {
         </div>
         <div className="flex items-start gap-6 ml-20">
           <img
-            src="./campus.jpg"
+            src="./Campus.jpg"
             alt="A Campus"
             className="w-1/5 aspect-square object-cover rounded-xl"
           />
@@ -234,7 +234,7 @@ export default function Home() {
               existed in pieces but never as a coherent investment thesis.
             </p>
             <img
-              src="./campus.jpg"
+              src="./Campus.jpg"
               alt="A Campus"
               className="w-1/5 aspect-square object-cover rounded-xl"
             />
